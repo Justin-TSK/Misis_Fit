@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
@@ -56,17 +57,25 @@ export default function LoginPage() {
         <LangSwitcher />
       </div>
 
-      <div className="relative hidden w-1/2 overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-950 lg:flex lg:flex-col lg:justify-between lg:p-12">
-        <div
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 20%, rgba(92,150,252,0.35), transparent 45%), radial-gradient(circle at 80% 70%, rgba(53,114,239,0.3), transparent 40%)",
-          }}
+      <div className="relative hidden w-1/2 overflow-hidden bg-primary-950 lg:flex lg:flex-col lg:justify-between lg:p-12">
+        <Image
+          src="/images/misis-campus.jpg"
+          alt="NUST MISIS campus"
+          fill
+          priority
+          sizes="50vw"
+          className="object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-950/95 via-primary-900/85 to-primary-950/95" />
         <div className="relative flex items-center gap-3">
-          <div className="flex size-10 items-center justify-center rounded-xl bg-white/10 text-white ring-1 ring-white/20">
-            <Dumbbell className="size-5" />
+          <div className="flex items-center rounded-xl bg-white px-3 py-2 shadow-lg shadow-primary-950/40">
+            <Image
+              src="/images/misis-logo.png"
+              alt="MISIS logo"
+              width={1123}
+              height={555}
+              className="h-7 w-auto"
+            />
           </div>
           <div className="leading-tight">
             <p className="text-lg font-bold text-white">{t.brand}</p>
@@ -103,8 +112,14 @@ export default function LoginPage() {
       <div className="flex w-full items-center justify-center px-4 py-12 lg:w-1/2">
         <div className="w-full max-w-sm">
           <div className="mb-8 flex items-center gap-3 lg:hidden">
-            <div className="flex size-10 items-center justify-center rounded-xl bg-primary-600 text-white">
-              <Dumbbell className="size-5" />
+            <div className="flex items-center rounded-xl bg-white px-3 py-2 shadow-lg shadow-primary-950/40">
+              <Image
+                src="/images/misis-logo.png"
+                alt="MISIS logo"
+                width={1123}
+                height={555}
+                className="h-7 w-auto"
+              />
             </div>
             <div className="leading-tight">
               <p className="text-lg font-bold text-white">{t.brand}</p>

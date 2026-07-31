@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import {
   CalendarDays,
@@ -40,8 +41,14 @@ function Brand({ dark }: { dark?: boolean }) {
   const { t } = useI18n();
   return (
     <Link href="/app/dashboard" className="flex items-center gap-3">
-      <div className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary-400 to-primary-700 text-white shadow-lg shadow-primary-950/40">
-        <Dumbbell className="size-5" />
+      <div className="flex size-9 items-center justify-center overflow-hidden rounded-xl bg-white shadow-lg shadow-primary-950/40">
+        <Image
+          src="/images/misis-logo.png"
+          alt="MISIS logo"
+          width={1123}
+          height={555}
+          className="h-6 w-auto"
+        />
       </div>
       <div className="leading-tight">
         <p className={cn("text-base font-bold tracking-tight", dark ? "text-white" : "text-slate-900")}>
