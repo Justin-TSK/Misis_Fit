@@ -22,7 +22,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
-    "netlify-cli": "^27.0.1",
+    "netlify-cli": "^27.15.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
